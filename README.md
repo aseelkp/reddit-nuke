@@ -6,6 +6,8 @@ A Chrome extension built to automate the deletion of your Reddit history.
 
 Reddit's modern UI (React) heavily obfuscates its DOM, and the official API heavily restricts batch deletions. This tool takes the brute-force UI route. It runs entirely on `old.reddit.com` where the DOM is static and predictable. It injects a content script that handles rate limiting, pagination, and state persistence across page reloads.
 
+![Screenshot](images/image.png)
+
 ## Features
 
 * **Granular Targeting:** Select whether to delete Comments, Posts, or both.
