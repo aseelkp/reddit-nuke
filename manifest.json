@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Reddit Nuker",
+  "version": "6.0",
+  "description": "Nuke your Reddit history.",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "host_permissions": ["https://old.reddit.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Reddit Nuker",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "32": "images/icon32.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://old.reddit.com/user/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
